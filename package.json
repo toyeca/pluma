@@ -1,0 +1,23 @@
+{
+  "name": "pluma",
+  "version": "1.0.0",
+  "description": "Testing technologies to develop ultr-light websites",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p build; cp src/index.html build/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyeca/pluma.git"
+  },
+  "keywords": [
+    "pluma"
+  ],
+  "author": "Daniel Peña Gil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toyeca/pluma/issues"
+  },
+  "homepage": "https://github.com/toyeca/pluma#readme"
+}
