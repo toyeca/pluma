@@ -1,39 +1,14 @@
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
-    />
-    <style>
-      h1 {
-        margin-top: 10vh;
-        text-align: center;
-      }
-      .container {
-        margin: 5vh auto 0;
-        width: 95vmin;
-      }
-      .responsive {
-        height: 0;
-        padding-bottom: 75%;
-        position: relative;
-        text-align: center;
-        width: 100%;
-      }
-      video {
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-    </style>
-    <title>Playing</title>
+    <link rel="stylesheet" href="p.css" />
+    <title>Alvaro Mayoral · Entrena y vive mejor</title>
   </head>
-  <body>
-    <h1>Entrenando duro</h1>
-    <p><em>Added Cloud invalidation support</em></p>
-    <div class="container">
-      <div class="responsive">
+  <body class="bg-blue-100">
+    <div class="container mx-auto">
+      <h1 class="text-center mb-8 mt-16 text-5xl">Entrenando duro</h1>
+      <div class="flex flex-col pb-16 items-center">
         <video
+          class="rounded-lg shadow-xl"
           src="https://media.giphy.com/media/4bjIKBOWUnVPICCzJc/giphy.mp4"
           autoplay
           loop
@@ -41,6 +16,22 @@
           playsinline
         ></video>
       </div>
+      <section class="mb-4">
+        <h3 class="text-xl">Next steps</h3>
+        <p>
+          Integrate WebPack, auto deploy for development and
+          <a href="https://tailwindcss.com/docs/controlling-file-size"
+            >Purgecss</a
+          >.
+        </p>
+      </section>
+      <ul class="bg-blue-800 text-gray-100 rounded-lg shadow-xl p-4 text-sm">
+        <li><strong>March 26 2020:</strong> Tailwind integrated</li>
+        <li>
+          <strong>March 25 2020:</strong> CloudFront invalidation when deployed
+        </li>
+        <li><strong>March 22 2020:</strong> First commit</li>
+      </ul>
     </div>
   </body>
 </html>

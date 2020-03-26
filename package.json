@@ -4,7 +4,9 @@
   "description": "Testing technologies to develop ultr-light websites",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p build; cp src/index.html build/",
+    "build": "npm run build.css && npm run build.html",
+    "build.html": "mkdir -p build; cp src/index.html build/",
+    "build.css": "tailwindcss build src/p.css -o build/p.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/toyeca/pluma/issues"
   },
-  "homepage": "https://github.com/toyeca/pluma#readme"
+  "homepage": "https://github.com/toyeca/pluma#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^1.2.0"
+  }
 }
