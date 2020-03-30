@@ -2,11 +2,11 @@
   "name": "pluma",
   "version": "1.0.0",
   "description": "Testing technologies to develop ultr-light websites",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "npm run build.css && npm run build.html",
-    "build.html": "mkdir -p build; cp src/index.html build/",
-    "build.css": "tailwindcss build src/p.css -o build/p.css",
+    "build": "webpack --mode production --env.NODE_ENV=production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +16,7 @@
   "keywords": [
     "pluma"
   ],
-  "author": "Daniel Peña Gil",
+  "author": "Raspegil",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/toyeca/pluma/issues"
@@ -24,6 +24,17 @@
   "homepage": "https://github.com/toyeca/pluma#readme",
   "dependencies": {},
   "devDependencies": {
-    "tailwindcss": "^1.2.0"
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.5",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^4.0.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss": "^7.0.27",
+    "postcss-loader": "^3.0.0",
+    "tailwindcss": "^1.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
