@@ -40,6 +40,20 @@ module.exports = (env, options) => ({
             }
           }
         ]
+      },
+      {
+        test: /\.ico$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: (url, resourcePath, context) => {
+                return url.replace(/^src\//, "");
+              }
+            }
+          }
+        ]
       }
     ]
   }
