@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: build-result
-          path: dist
+          path: dist/public
 
   deploy:
     name: Deploy to Amazon S3
