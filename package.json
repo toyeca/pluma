@@ -4,9 +4,9 @@
   "description": "Testing technologies to develop ultr-light websites",
   "private": true,
   "scripts": {
-    "build": "webpack --mode production --env.NODE_ENV=production",
+    "build": "webpack --mode production --config webpack.config.prebuild.js --env.NODE_ENV=production && webpack --mode production --env.NODE_ENV=production",
     "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack --mode development --config webpack.config.prebuild.js && webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +29,8 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
+    "handlebars": "^4.7.6",
+    "handlebars-webpack-plugin": "^1.8.1",
     "html-webpack-plugin": "^4.0.3",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss": "^7.0.27",
