@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.0.7] - 2020-04-12
+### Fixed
+- Favicon
+### Added
+- Shared configuration for different webpack conf-files
+
 ## [v0.0.6] - 2020-04-12
 ### Added
 - Handlebars support

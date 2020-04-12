@@ -1,5 +1,6 @@
 const path = require("path");
 const Handlebars = require("handlebars");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const sanitizePath = path => path.replace(/\\/g, "/");
 
@@ -30,6 +31,44 @@ module.exports = {
           options.fn(this).replace(/\.\.\/\.\.\/public/, "")
         );
       }
-    }
+    },
+    rules: (env, options) => [
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                ctx: {
+                  webpack: { ...options }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.ico$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: (url, resourcePath, context) => {
+                return url.replace(/^src\/public\//, "");
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 };
