@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const Pluma = require("./src/webpack/helpers");
 
 module.exports = (env, options) => ({
   entry: "./src/public/index.js",
@@ -25,29 +26,6 @@ module.exports = (env, options) => ({
     })
   ],
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1
-            }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              config: {
-                ctx: {
-                  webpack: { ...options }
-                }
-              }
-            }
-          }
-        ]
-      }
-    ]
+    rules: Pluma.webpack.rules(env, options)
   }
 });

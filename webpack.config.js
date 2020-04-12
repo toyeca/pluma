@@ -77,43 +77,6 @@ module.exports = (env, options) => ({
     })
   ],
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1
-            }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              config: {
-                ctx: {
-                  webpack: { ...options }
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        test: /\.ico$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-              outputPath: (url, resourcePath, context) => {
-                return url.replace(/^src\//, "");
-              }
-            }
-          }
-        ]
-      }
-    ]
+    rules: Pluma.webpack.rules(env, options)
   }
 });
