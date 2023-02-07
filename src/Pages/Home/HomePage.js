@@ -2,9 +2,6 @@ import React from "react";
 import userImage from "../../assets/images/about/avatar.jpg";
 import downloadIcon from "../../assets/images/download.png";
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaDribbble,
   FaLinkedinIn, FaInstagram, FaWhatsapp,
 } from "react-icons/fa";
 import PageTitle from "../../Share/PageTitle";

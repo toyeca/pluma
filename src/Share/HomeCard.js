@@ -1,13 +1,12 @@
 import React from "react";
 import {
   FaCalendarAlt,
-  FaDribbble,
   FaEnvelopeOpenText,
-  FaFacebookF, FaInstagram,
+  FaInstagram,
   FaLinkedinIn,
   FaMapMarkerAlt,
   FaMobileAlt,
-  FaTwitter, FaWhatsapp,
+  FaWhatsapp,
 } from "react-icons/fa";
 import img from "../assets/images/about/avatar.jpg";
 import downloadIcon from "../assets/images/download.png";
