@@ -5,7 +5,6 @@ import UseData from "../../Hooks/UseData";
 import Footer from "../../Share/Footer";
 import { FiUser, FiCode, FiFilePlus, FiExternalLink } from "react-icons/fi";
 import { BsXCircle } from "react-icons/bs";
-import { useEffect } from "react";
 import PageTitle from "../../Share/PageTitle";
 
 Modal.setAppElement("#root");
@@ -25,10 +24,6 @@ const CommonPortfilo = ({ condition, items }) => {
     handleData(text);
     setTest(text);
   };
-  useEffect(() => {
-    setTest("All");
-    handleData("All");
-  }, []);
   const handleModle = (id) => {
     handleModelData(id);
   };
