@@ -18,7 +18,7 @@ const CommonContact = ({ condition }) => {
         "user_vYmDSd9PwIuRXUQEDjYwN"
       )
       .then(
-        (result) => {
+        (_result) => {
           toast.success("Message Sent successfully!", {
             position: "top-right",
             autoClose: 5000,
@@ -30,7 +30,7 @@ const CommonContact = ({ condition }) => {
           });
           document.getElementById("myForm").reset();
         },
-        (error) => {
+        (_error) => {
           toast.error("Ops Message not Sent!", {
             position: "top-right",
             autoClose: 5000,
